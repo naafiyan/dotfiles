@@ -80,7 +80,16 @@ lazy.setup({
 	{"lervag/vimtex"},
 
 	-- autoclose bracket
-	{ "cohama/lexima.vim" }
+	{ "cohama/lexima.vim" },
+
+	{ "epwalsh/obsidian.nvim",
+		version = "*",
+		dependencies = {
+			"nvim-lua/plenary.nvim", 
+			"hrsh7th/nvim-cmp"
+		}
+
+	}
 })
 
 return lazy
