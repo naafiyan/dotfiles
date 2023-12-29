@@ -15,9 +15,10 @@ end
 -- For example, changing the color scheme:
 config.color_scheme = 'Catppuccin Macchiato'
 
-config.default_cwd = '/Users/naafiyanahmed/home'
+-- Default dir is home
+config.default_cwd = '/Users/naafiyan/home'
 
-config.font_size = 13.0
+config.font_size = 14.0
 
 config.keys = {
   -- This will create a new split and run your default program inside it

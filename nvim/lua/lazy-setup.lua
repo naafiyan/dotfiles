@@ -33,9 +33,10 @@ lazy.opts = {}
 
 lazy.setup({
 	-- Themes
-  	{ "folke/tokyonight.nvim" },
+ --  	{ "folke/tokyonight.nvim" },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{'rebelot/kanagawa.nvim'},
+	-- {'rebelot/kanagawa.nvim'},
+--	{'ellisonleao/gruvbox.nvim', priority = 1000},
 
 	{'nvim-lualine/lualine.nvim'},
 	{'akinsho/bufferline.nvim'},
@@ -44,6 +45,7 @@ lazy.setup({
 	{"editorconfig/editorconfig-vim"},
 	{'lewis6991/gitsigns.nvim'},
   	{'tpope/vim-fugitive'},
+	{"tpope/vim-surround"},
 	{'neovim/nvim-lspconfig'},
 	{'stevearc/oil.nvim'},
 
@@ -76,6 +78,9 @@ lazy.setup({
 
 	-- latex
 	{"lervag/vimtex"},
+
+	-- file tree
+	{"nvim-tree/nvim-tree.lua"},
 })
 
 return lazy

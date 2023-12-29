@@ -15,7 +15,7 @@ vim.opt.modifiable = true
 vim.opt.termguicolors = true
 
 -- autocomplete menu settings
-vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+vim.opt.completeopt = {"menu", 'menuone', 'noselect'}
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -25,3 +25,4 @@ vim.opt.statuscolumn = '%=%{v:relnum?v:relnum:v:lnum} '
 vim.cmd.colorscheme "catppuccin"
 -- vim.cmd.colorscheme "tokyonight"
 -- vim.cmd.colorscheme "kanagawa"
+-- vim.cmd.colorscheme "gruvbox"
