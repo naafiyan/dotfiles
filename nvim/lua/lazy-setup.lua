@@ -78,6 +78,9 @@ lazy.setup({
 
 	-- latex
 	{"lervag/vimtex"},
+
+	-- autoclose bracket
+	{ "cohama/lexima.vim" }
 })
 
 return lazy

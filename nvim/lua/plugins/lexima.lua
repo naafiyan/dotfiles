@@ -1,0 +1,2 @@
+require("lexima").setup({})
+
