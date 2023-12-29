@@ -78,9 +78,6 @@ lazy.setup({
 
 	-- latex
 	{"lervag/vimtex"},
-
-	-- file tree
-	{"nvim-tree/nvim-tree.lua"},
 })
 
 return lazy
