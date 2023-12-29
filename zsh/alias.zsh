@@ -16,3 +16,4 @@ alias bsshy="ssh nahmed21@ssh.cs.brown.edu -Y"
 
 alias ls="ls --color"
 alias python=$(which python3.11)
+alias fzo='open "$(fzf)"'

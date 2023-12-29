@@ -10,7 +10,8 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
--- This is where you actually apply your config choices
+-- disable title bar
+config.window_decorations = "RESIZE"
 
 -- For example, changing the color scheme:
 config.color_scheme = 'Catppuccin Macchiato'
@@ -18,7 +19,10 @@ config.color_scheme = 'Catppuccin Macchiato'
 -- Default dir is home
 config.default_cwd = '/Users/naafiyan/home'
 
-config.font_size = 14.0
+-- Font
+config.font = wezterm.font("FiraCode Nerd Font",{weight="Regular", stretch="Normal", style="Normal"})
+
+config.font_size = 13.0
 
 config.keys = {
   -- This will create a new split and run your default program inside it
