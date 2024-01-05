@@ -7,4 +7,9 @@ vim.keymap.set(
   end,
   { silent = true, buffer = bufnr }
 )
-
+vim.api.nvim_create_autocmd("BufWritePre", {
+  callback = function()
+    vim.lsp.buf.format({ timeout_ms = 200 })
+  end,
+  group = format_sync_grp,
+})
