@@ -32,13 +32,16 @@ if vim.g.lsp_setup_ready == nil then
       }
     },
   })
-  lspconfig.svelte.setup({
-	filetypes = {"svelte", "html"}
-  })
+ --  lspconfig.svelte.setup({
+	-- filetypes = {"svelte", "html"}
+ --  })
 
   lspconfig.pyright.setup({})
 
   -- systems language
   lspconfig.clangd.setup {}
   lspconfig.texlab.setup({})
+  
+  -- swift
+  lspconfig.sourcekit.setup({})
 end

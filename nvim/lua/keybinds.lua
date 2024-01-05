@@ -5,6 +5,10 @@ vim.g.maplocalleader = "\\" -- localleader is \
 vim.keymap.set({'n', 'x'}, 'gy', '"+y')
 vim.keymap.set({'n', 'x'}, 'gp', '"+p')
 
+-- page up and down and center
+vim.keymap.set({'n'}, '<C-b>', '<PageUp>zz')
+vim.keymap.set({'n'}, '<C-f>', '<PageDown>zz')
+
 -- telescope keybinds
 vim.keymap.set('n', '<leader>?', '<cmd>Telescope oldfiles<cr>')
 vim.keymap.set('n', '<leader><space>', '<cmd>Telescope buffers<cr>')

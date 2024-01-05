@@ -32,11 +32,8 @@ lazy.path = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 lazy.opts = {}
 
 lazy.setup({
-	-- Themes
- --  	{ "folke/tokyonight.nvim" },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	-- {'rebelot/kanagawa.nvim'},
---	{'ellisonleao/gruvbox.nvim', priority = 1000},
+	{ "nvim-tree/nvim-web-devicons" },
 
 	{'nvim-lualine/lualine.nvim'},
 	{'akinsho/bufferline.nvim'},
@@ -72,8 +69,13 @@ lazy.setup({
 	-- lean
 	{'Julian/lean.nvim'},
 	
-	{'simrat39/rust-tools.nvim'},
-	{'mfussenegger/nvim-dap'},
+	-- {'simrat39/rust-tools.nvim'},
+	{ 
+		"mrcjkb/rustaceanvim",
+		version = '^3',
+		ft = { 'rust' },
+	},
+	{ 'mfussenegger/nvim-dap' },
 	{'numToStr/Comment.nvim'},
 
 	-- latex
@@ -89,6 +91,15 @@ lazy.setup({
 			"hrsh7th/nvim-cmp"
 		}
 
+	},
+	{ "folke/twilight.nvim" },
+	{ "folke/zen-mode.nvim",
+		opts = {
+			options = {
+				number = false, -- disable number column
+				relativenumber = false, -- disable relative numbers
+    		},
+		}
 	}
 })
 

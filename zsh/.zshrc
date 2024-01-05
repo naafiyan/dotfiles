@@ -30,5 +30,8 @@ export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# swift lsp
+export PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp:$PATH"
+
 # enable vim mode
 bindkey -v
