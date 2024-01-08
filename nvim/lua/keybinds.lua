@@ -20,7 +20,7 @@ vim.keymap.set('n', '<C-l>', '<cmd>BufferLineCycleNext<cr>')
 vim.keymap.set('n', '<C-h>', '<cmd>BufferLineCyclePrev<cr>')
 vim.api.nvim_set_keymap(
   "n",
-  "<space>fb",
+  "<leader>fb",
   ":Telescope file_browser<CR>",
   { noremap = true }
 )

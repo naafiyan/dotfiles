@@ -36,7 +36,6 @@ lazy.setup({
 	{ "nvim-tree/nvim-web-devicons" },
 
 	{'nvim-lualine/lualine.nvim'},
-	{'akinsho/bufferline.nvim'},
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 	{"nvim-treesitter/nvim-treesitter"},
 	{"editorconfig/editorconfig-vim"},
@@ -95,6 +94,11 @@ lazy.setup({
 				relativenumber = false, -- disable relative numbers
     		},
 		}
+	},
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" }
 	}
 })
 

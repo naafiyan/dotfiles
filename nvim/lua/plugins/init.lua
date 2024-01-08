@@ -1,4 +1,4 @@
-require('plugins.bufferline')
+require('plugins.harpoon')
 require('plugins.cmp-luasnip')
 require('plugins.comment')
 require('plugins.gitsigns')
