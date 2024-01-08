@@ -46,8 +46,6 @@ if vim.g.lsp_setup_ready == nil then
   lspconfig.sourcekit.setup({})
 end
 local on_attach = function(client, bufnr)
-	vim.bo[bufnr].omnifunc = "v:lua.vim.lsp.omnifunc"
-
 	--- toggle inlay hints
 	vim.g.inlay_hints_visible = false
 	local function toggle_inlay_hints()
