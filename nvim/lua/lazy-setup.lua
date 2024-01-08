@@ -65,17 +65,12 @@ lazy.setup({
   	{'L3MON4D3/LuaSnip'},
   	{'rafamadriz/friendly-snippets'},
 	{"nvim-treesitter/nvim-treesitter-textobjects"},
-
-	-- lean
-	{'Julian/lean.nvim'},
 	
-	-- {'simrat39/rust-tools.nvim'},
 	{ 
 		"mrcjkb/rustaceanvim",
 		version = '^3',
 		ft = { 'rust' },
 	},
-	{ 'mfussenegger/nvim-dap' },
 	{'numToStr/Comment.nvim'},
 
 	-- latex

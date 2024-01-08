@@ -58,5 +58,3 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- bufmap('x', '<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
   end
 })
-
-

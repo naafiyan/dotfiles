@@ -45,3 +45,22 @@ if vim.g.lsp_setup_ready == nil then
   -- swift
   lspconfig.sourcekit.setup({})
 end
+local on_attach = function(client, bufnr)
+	vim.bo[bufnr].omnifunc = "v:lua.vim.lsp.omnifunc"
+
+	--- toggle inlay hints
+	vim.g.inlay_hints_visible = false
+	local function toggle_inlay_hints()
+		if vim.g.inlay_hints_visible then
+			vim.g.inlay_hints_visible = false
+			vim.lsp.inlay_hint(bufnr, false)
+		else
+			if client.server_capabilities.inlayHintProvider then
+				vim.g.inlay_hints_visible = true
+				vim.lsp.inlay_hint(bufnr, true)
+			else
+				print("no inlay hints available")
+			end
+		end
+	end
+end
