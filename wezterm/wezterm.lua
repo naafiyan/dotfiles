@@ -77,15 +77,13 @@ config.keys = {
 	  },
   }
 }
---
--- local mux = wezterm.mux
---
--- wezterm.on("gui-startup", function()
---   local tab, pane, window = mux.spawn_window{
--- 	domain = { DomainName = 'local' }
---   }
---   window:gui_window():maximize()
--- end)
+
+local mux = wezterm.mux
+
+wezterm.on("gui-startup", function()
+  local tab, pane, window = mux.spawn_window{}
+  window:gui_window():maximize()
+end)
 
 
 -- and finally, return the configuration to wezterm
