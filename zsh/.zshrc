@@ -33,5 +33,11 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # swift lsp
 export PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp:$PATH"
 
+export PATH="/Users/naafiyan/go/bin:$PATH"
+
 # enable vim mode
 bindkey -v
+
+# wezterm shell integration
+source "$ZDOTDIR/wezterm.sh"
+

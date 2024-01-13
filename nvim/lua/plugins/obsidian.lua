@@ -42,3 +42,5 @@ vim.keymap.set("n", "gf", function()
     return "gf"
   end
 end, { noremap = false, expr = true })
+
+vim.keymap.set("n", "<localleader>p", "<cmd>ObsidianPasteImg<CR>")

@@ -44,6 +44,11 @@ if vim.g.lsp_setup_ready == nil then
   
   -- swift
   lspconfig.sourcekit.setup({})
+
+  -- golang
+  lspconfig.gopls.setup{}
+
+  lspconfig.lua_ls.setup{}
 end
 local on_attach = function(client, bufnr)
 	--- toggle inlay hints

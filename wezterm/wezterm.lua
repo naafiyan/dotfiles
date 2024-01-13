@@ -20,12 +20,10 @@ config.color_scheme = 'Catppuccin Macchiato'
 config.default_cwd = '/Users/naafiyan/home'
 
 -- Font
-config.font = wezterm.font("FiraCode Nerd Font", {weight=450, stretch="Normal", style="Normal"})
-
+config.font = wezterm.font("JetBrains Mono")
 config.font_size = 14.0
 
 config.keys = {
-  -- This will create a new split and run your default program inside it
   {
     key = 'Enter',
     mods = 'CMD',
@@ -34,45 +32,49 @@ config.keys = {
   {
     key = 'Enter',
     mods = 'CMD | SHIFT',
-    action = wezterm.action.SplitPane {
-      direction = 'Down',
-      size = { Percent = 30 },
-    },
-  },
+    action = wezterm.action.SplitVertical{ domain = 'CurrentPaneDomain' }
+},
   {
     key = '`',
     mods = 'CTRL',
     action = wezterm.action.TogglePaneZoomState,
   },
   {
-    key = 'w',
-    mods = 'CMD | SHIFT',
+    key = 'W',
+    mods = 'SUPER',
     action = wezterm.action.CloseCurrentTab { confirm = true },
   },
   {
-    key = 'w',
-    mods = 'CMD',
+    key = 'D',
+    mods = 'SUPER | SHIFT',
     action = wezterm.action.CloseCurrentPane { confirm = true },
 	},
  {
-    key = 'LeftArrow',
-    mods = 'CMD|SHIFT',
-    action = act.ActivatePaneDirection 'Left',
+    key = 'L',
+    mods = 'SUPER | SHIFT',
+    action = act.ActivatePaneDirection 'Next',
+  },
+ {
+    key = 'H',
+    mods = 'SUPER | SHIFT',
+    action = act.ActivatePaneDirection 'Prev',
   },
   {
     key = 'RightArrow',
-    mods = 'CMD|SHIFT',
-    action = act.ActivatePaneDirection 'Right',
+    mods = 'SUPER | SHIFT',
+    action = act.ActivateTabRelative(1),
   },
   {
-    key = 'UpArrow',
-    mods = 'CMD|SHIFT',
-    action = act.ActivatePaneDirection 'Up',
+    key = 'LeftArrow',
+    mods = 'SUPER |SHIFT',
+    action = act.ActivateTabRelative(-1),
   },
   {
-    key = 'DownArrow',
-    mods = 'CMD|SHIFT',
-    action = act.ActivatePaneDirection 'Down',
+	  key = 'T',
+	  mods = 'SUPER | SHIFT',
+	  action = act.SpawnCommandInNewTab {
+		  cwd = "/Users/naafiyan/home"
+	  },
   }
 }
 --

@@ -9,15 +9,24 @@ vim.keymap.set({'n', 'x'}, 'gp', '"+p')
 vim.keymap.set({'n'}, '<C-b>', '<PageUp>zz')
 vim.keymap.set({'n'}, '<C-f>', '<PageDown>zz')
 
+-- buffer navigation
+vim.keymap.set('n', '<C-n>', '<cmd>bnext<cr>')
+vim.keymap.set('n', '<C-p>', '<cmd>bprev<cr>')
+
 -- telescope keybinds
+local tsbuiltin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>?', '<cmd>Telescope oldfiles<cr>')
-vim.keymap.set('n', '<leader><space>', '<cmd>Telescope buffers<cr>')
 vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
 vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
 vim.keymap.set('n', '<leader>fd', '<cmd>Telescope diagnostics<cr>')
 vim.keymap.set('n', '<leader>fs', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
-vim.keymap.set('n', '<C-l>', '<cmd>BufferLineCycleNext<cr>')
-vim.keymap.set('n', '<C-h>', '<cmd>BufferLineCyclePrev<cr>')
+vim.keymap.set('n', '<leader><space>', 
+	function() tsbuiltin.buffers({
+			sort_mru=true, 
+			ignore_current_buffer=true
+		})
+	end
+)
 vim.api.nvim_set_keymap(
   "n",
   "<leader>fb",
