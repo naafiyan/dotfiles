@@ -38,12 +38,23 @@ if vim.g.lsp_setup_ready == nil then
 
   lspconfig.pyright.setup({})
 
-  -- systems language
-  lspconfig.clangd.setup {}
+  -- -- systems language
+  -- lspconfig.clangd.setup ( {
+  -- cmd = {
+  --   "clangd",
+  --   "--offset-encoding=utf-16",
+  -- },
+  -- } )
+  -- lspconfig.cmake.setup({
+	 --  settings = {
+		--   cmd = {"cmake-language-server"},
+		--   filetypes = {"cmake", "CMakeLists.txt"}
+	 --  }
+  -- })
   lspconfig.texlab.setup({})
   
-  -- swift
-  lspconfig.sourcekit.setup({})
+  -- -- swift
+  -- lspconfig.sourcekit.setup({})
 
   -- golang
   lspconfig.gopls.setup{}

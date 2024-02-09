@@ -5,12 +5,3 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
   group = format_sync_grp,
 })
-
-vim.g.rustaceanvim = {
-	server = {
-		on_attach {
-			vim.g.inlay_hints_visible = true
-		vim.lsp.inlay_hint(bufnr, true)
-	}
-}
-}

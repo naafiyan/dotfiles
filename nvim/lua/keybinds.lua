@@ -13,6 +13,12 @@ vim.keymap.set({'n'}, '<C-f>', '<PageDown>zz')
 vim.keymap.set('n', '<C-n>', '<cmd>bnext<cr>')
 vim.keymap.set('n', '<C-p>', '<cmd>bprev<cr>')
 
+-- navigating splits
+vim.keymap.set('n', '<C-k>', '<cmd>wincmd k<cr>')
+vim.keymap.set('n', '<C-j>', '<cmd>wincmd j<cr>')
+vim.keymap.set('n', '<C-h>', '<cmd>wincmd h<cr>')
+vim.keymap.set('n', '<C-l>', '<cmd>wincmd l<cr>')
+
 -- telescope keybinds
 local tsbuiltin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>?', '<cmd>Telescope oldfiles<cr>')
@@ -54,14 +60,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
     bufmap('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
     bufmap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
     bufmap('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
-    bufmap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
+    bufmap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>')
     bufmap({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>')
     bufmap('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
     bufmap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
     bufmap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
 
-    bufmap('n', 'gC', '<cmd>lua vim.lsp.buf.code_action()<cr>')
-    bufmap('x', 'gC', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+    bufmap({'n', 'x'}, '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>')
 
     -- if using Neovim v0.8 uncomment this
     -- bufmap('x', '<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')

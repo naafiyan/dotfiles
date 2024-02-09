@@ -1,27 +1,13 @@
-require('lazy-setup') -- set up lazy
-require('options') -- vim.opts and other settings
-require('plugins')
-require('keybinds') -- keybindings
-require('lsp')
-require('diagnostics')
-require('user_cmds')
-
 require('mason').setup()
 require('mason-lspconfig').setup()
 local servers = {
-  clangd = {
-    cmd = {
-      "clangd",
-      "--function-arg-placeholders=0"
-    }
-  },
+  clangd = {},
   gopls = {},
   pyright = {},
   tsserver = {},
   html = { filetypes = { 'html'} },
   texlab = {},
   lua_ls = {}
-}
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()

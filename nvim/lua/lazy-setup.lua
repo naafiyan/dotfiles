@@ -32,9 +32,22 @@ lazy.path = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 lazy.opts = {}
 
 lazy.setup({
+	-- no config plugins
+	{'tpope/vim-sleuth'},
+	-- {
+	--   "folke/tokyonight.nvim",
+	--   lazy = false,
+	--   priority = 1000,
+	--   opts = {},
+	-- },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	-- {
+	--   "craftzdog/solarized-osaka.nvim",
+	--   lazy = false,
+	--   priority = 1000,
+	--   opts = {},
+	-- },
 	{ "nvim-tree/nvim-web-devicons" },
-
 	{'nvim-lualine/lualine.nvim'},
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 	{"nvim-treesitter/nvim-treesitter"},
@@ -42,7 +55,22 @@ lazy.setup({
 	{'lewis6991/gitsigns.nvim'},
   	{'tpope/vim-fugitive'},
 	{"tpope/vim-surround"},
-	{'neovim/nvim-lspconfig'},
+	{
+    -- LSP Configuration & Plugins
+    'neovim/nvim-lspconfig',
+    dependencies = {
+      -- Automatically install LSPs to stdpath for neovim
+      { 'williamboman/mason.nvim', config = true },
+      'williamboman/mason-lspconfig.nvim',
+
+      -- Useful status updates for LSP
+      -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
+      { 'j-hui/fidget.nvim', opts = {} },
+
+      -- Additional lua configuration, makes nvim stuff amazing!
+      'folke/neodev.nvim',
+    	},
+  	},
 	{'stevearc/oil.nvim'},
 
 	-- Utilities
@@ -60,14 +88,21 @@ lazy.setup({
   	{'hrsh7th/cmp-path'},
   	{'saadparwaiz1/cmp_luasnip'},
   	{'hrsh7th/cmp-nvim-lsp'},
+
+	-- lsp signature help
+	{
+	  "ray-x/lsp_signature.nvim",
+	  event = "VeryLazy",
+	  opts = {},
+	  config = function(_, opts) require'lsp_signature'.setup(opts) end
+	},
 	  -- Snippets
   	{'L3MON4D3/LuaSnip'},
   	{'rafamadriz/friendly-snippets'},
 	{"nvim-treesitter/nvim-treesitter-textobjects"},
-	
-	{ 
+	{
 		"mrcjkb/rustaceanvim",
-		version = '^3',
+		version = '^4',
 		ft = { 'rust' },
 	},
 	{'numToStr/Comment.nvim'},
@@ -101,5 +136,4 @@ lazy.setup({
 	-- 	dependencies = { "nvim-lua/plenary.nvim" }
 	-- }
 })
-
 return lazy
