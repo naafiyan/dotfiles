@@ -15,6 +15,7 @@ end
 
 -- For example, changing the color scheme:
 config.color_scheme = 'Catppuccin Macchiato'
+-- config.color_scheme = 'Tokyo Night'
 
 -- Default dir is home
 config.default_cwd = '/Users/naafiyan/home'
@@ -35,11 +36,6 @@ config.keys = {
     action = wezterm.action.SplitVertical{ domain = 'CurrentPaneDomain' }
 },
   {
-    key = '`',
-    mods = 'CTRL',
-    action = wezterm.action.TogglePaneZoomState,
-  },
-  {
     key = 'W',
     mods = 'SUPER',
     action = wezterm.action.CloseCurrentTab { confirm = true },
@@ -52,12 +48,29 @@ config.keys = {
  {
     key = 'L',
     mods = 'SUPER | SHIFT',
-    action = act.ActivatePaneDirection 'Next',
+    action = act.ActivatePaneDirection 'Right',
   },
  {
     key = 'H',
     mods = 'SUPER | SHIFT',
-    action = act.ActivatePaneDirection 'Prev',
+    action = act.ActivatePaneDirection 'Left',
+  },
+
+ {
+    key = 'K',
+    mods = 'SUPER | SHIFT',
+    action = act.ActivatePaneDirection 'Up',
+  },
+
+ {
+    key = 'J',
+    mods = 'SUPER | SHIFT',
+    action = act.ActivatePaneDirection 'Down',
+  },
+ {
+    key = ';',
+    mods = 'SUPER | SHIFT',
+    action = wezterm.action.TogglePaneZoomState,
   },
   {
     key = 'RightArrow',

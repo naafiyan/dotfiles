@@ -15,7 +15,7 @@ alias bssh="ssh nahmed21@ssh.cs.brown.edu"
 alias bsshy="ssh nahmed21@ssh.cs.brown.edu -Y"
 
 alias ls="ls --color"
-alias python=$(which python3.11)
 alias fzo='open "$(fzf)"'
+alias nvf='open -a nvim'
 
 alias xweenix='xhost +localhost'

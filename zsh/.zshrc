@@ -34,9 +34,12 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp:$PATH"
 
 export PATH="/Users/naafiyan/go/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 
 # enable vim mode
 bindkey -v
+
 
 # wezterm shell integration
 source "$ZDOTDIR/wezterm.sh"
