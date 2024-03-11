@@ -28,4 +28,5 @@
 
 ## Oil
 `g. + .` = Toggle hidden files,
+- `<leader> + fo`: Open Oil
 

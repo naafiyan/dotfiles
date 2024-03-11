@@ -2,7 +2,7 @@ nnoremap <buffer> j gj
 vnoremap <buffer> j gj
 nnoremap <buffer> k gk
 vnoremap <buffer> k gk
-set spelllang=en_us spell
+" set spelllang=en_us spell
 " let g:markdown_folding = 1
 
 call vimtex#init()

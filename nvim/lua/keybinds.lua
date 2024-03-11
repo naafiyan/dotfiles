@@ -19,6 +19,9 @@ vim.keymap.set('n', '<C-j>', '<cmd>wincmd j<cr>')
 vim.keymap.set('n', '<C-h>', '<cmd>wincmd h<cr>')
 vim.keymap.set('n', '<C-l>', '<cmd>wincmd l<cr>')
 
+-- oil keybinds
+vim.keymap.set('n', '<leader>fo', '<cmd>Oil<cr>')
+
 -- telescope keybinds
 local tsbuiltin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>?', '<cmd>Telescope oldfiles<cr>')

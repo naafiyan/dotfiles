@@ -38,7 +38,7 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 
 # enable vim mode
-bindkey -v
+# bindkey -v
 
 
 # wezterm shell integration
