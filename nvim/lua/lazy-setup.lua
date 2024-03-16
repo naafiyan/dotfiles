@@ -44,6 +44,16 @@ lazy.setup({
 	{ 'lewis6991/gitsigns.nvim' },
 	{ 'tpope/vim-fugitive' },
 	{ "tpope/vim-surround" },
+
+	{
+	  "folke/todo-comments.nvim",
+	  dependencies = { "nvim-lua/plenary.nvim" },
+	  opts = {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+		}
+	},
 	{
 		-- LSP Configuration & Plugins
 		'neovim/nvim-lspconfig',
