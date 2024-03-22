@@ -134,11 +134,21 @@ lazy.setup({
 	{
 		'declancm/cinnamon.nvim',
 		config = function() require('cinnamon').setup() end
-	}
-	-- {
-	-- 	"ThePrimeagen/harpoon",
-	-- 	branch = "harpoon2",
-	-- 	dependencies = { "nvim-lua/plenary.nvim" }
-	-- }
+	},
+
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" }
+	},
+	{
+		"letieu/harpoon-lualine",
+		dependencies = {
+			{
+				"ThePrimeagen/harpoon",
+				branch = "harpoon2",
+			}
+		},
+	  }
 })
 return lazy
