@@ -9,5 +9,7 @@ export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
 
 export PATH="/opt/homebrew/bin:$PATH"
 
-# enable vim mode
+# enable vi mode + vi mode keybinds
 bindkey -v
+bindkey -v '^?' backward-delete-char # Backspace text beyond just the current insert
+
