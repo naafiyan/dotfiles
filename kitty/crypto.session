@@ -1,8 +1,0 @@
-cd ~/home/brownu/Spring2024/cs1515/
-launch ./cs1515-run-docker
-
-new_tab build
-layout tall
-cd ~/home/brownu/Spring2024/cs1515/
-launch ./cs1515-run-docker
-launch ./cs1515-run-docker

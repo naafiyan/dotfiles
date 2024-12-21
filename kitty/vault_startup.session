@@ -1,4 +1,0 @@
-layout horizontal
-cd ~/home/Vault/
-launch zsh
-launch nvim
