@@ -33,7 +33,7 @@ lazy.setup({
     -- no config plugins
     {'tpope/vim-repeat'},
     {'tpope/vim-sleuth'},
-    {"catppuccin/nvim", name = "catppuccin", flavour = "mocha", priority = 1000},
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     {"nvim-tree/nvim-web-devicons"},
     {'nvim-lualine/lualine.nvim'},
     {"lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {}},

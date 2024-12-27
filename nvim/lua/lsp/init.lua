@@ -21,21 +21,6 @@ vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
 if vim.g.lsp_setup_ready == nil then
   vim.g.lsp_setup_ready = true
 
-  -- web stack
-  lspconfig.html.setup({})
-  lspconfig.cssls.setup({})
-  lspconfig.eslint.setup({})
-  lspconfig.tsserver.setup({
-    settings = {
-      completions = {
-        completeFunctionCalls = true
-      }
-    },
-  })
- --  lspconfig.svelte.setup({
-	-- filetypes = {"svelte", "html"}
- --  })
-
   lspconfig.pyright.setup({})
 
   -- -- systems language
