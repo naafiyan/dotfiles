@@ -4,6 +4,7 @@ source "$ZDOTDIR/pure.zsh"
 source "$ZDOTDIR/alias.zsh"
 source "$ZDOTDIR/plugins.zsh"
 source "$ZDOTDIR/languages.zsh"
+source "$ZDOTDIR/functions.zsh"
 
 export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
 
