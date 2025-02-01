@@ -24,12 +24,12 @@ if vim.g.lsp_setup_ready == nil then
   lspconfig.pyright.setup({})
 
   -- -- systems language
-  -- lspconfig.clangd.setup ( {
-  -- cmd = {
-  --   "clangd",
-  --   "--offset-encoding=utf-16",
-  -- },
-  -- } )
+  lspconfig.clangd.setup ( {
+  cmd = {
+    "clangd",
+    "--offset-encoding=utf-16",
+  },
+	} )
   -- lspconfig.cmake.setup({
 	 --  settings = {
 		--   cmd = {"cmake-language-server"},

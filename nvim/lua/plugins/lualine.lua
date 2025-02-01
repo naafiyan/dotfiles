@@ -33,9 +33,15 @@ require('lualine').setup({
     section_separators = { left = '', right = '' },
   },
   sections = {
-    lualine_a = { 'filename' },
+    lualine_a = { 
+      {
+        'filename',
+        path = 1,
+      } 
+    },
     lualine_c = { "harpoon2" },
     lualine_y = {'progress', 'location' },
     lualine_z = { 'os.date("%I:%M %p")' }
-  }
+  },
+  extensions ={'oil'}
 })
