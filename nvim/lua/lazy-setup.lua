@@ -87,14 +87,5 @@ lazy.setup({
     {"mrcjkb/rustaceanvim", version = '^4', ft = {'rust'}},
     {'numToStr/Comment.nvim'}, -- autoclose bracket
     {"cohama/lexima.vim"},
-    {
-        "ThePrimeagen/harpoon",
-        branch = "harpoon2",
-        dependencies = {"nvim-lua/plenary.nvim"}
-    },
-    {
-        "letieu/harpoon-lualine",
-        dependencies = {{"ThePrimeagen/harpoon", branch = "harpoon2"}}
-    }
 })
 return lazy
