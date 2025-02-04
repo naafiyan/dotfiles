@@ -1,3 +1,3 @@
-fpath+=($HOME/.zsh/pure)
+fpath+=($ZDOTDIR/pure)
 autoload -U promptinit; promptinit
 prompt pure
