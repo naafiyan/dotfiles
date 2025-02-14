@@ -17,4 +17,9 @@ source "$ZDOTDIR/functions.zsh"
 bindkey -v
 bindkey -v '^?' backward-delete-char # Backspace text beyond just the current insert
 
+# Enable shared history between zsh sessions without dups or spaces.
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+
 source "$ZDOTDIR/plugins.zsh"
