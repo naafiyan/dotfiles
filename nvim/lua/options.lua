@@ -20,6 +20,9 @@ vim.opt.completeopt = {"menu", 'menuone', 'noselect'}
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.statuscolumn = '%=%{v:relnum?v:relnum:v:lnum} '
+
+-- text cursor settings
+vim.opt.guicursor = "n-v-i-c:block-Cursor"
 --
 -- THEME
 -- vim.cmd.colorscheme "catppuccin-mocha"
