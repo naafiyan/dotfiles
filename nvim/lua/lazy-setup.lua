@@ -33,7 +33,6 @@ lazy.setup({
     -- no config plugins
     {'tpope/vim-repeat'},
     {'tpope/vim-sleuth'},
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     {
       'sainnhe/gruvbox-material',
       lazy = false,
@@ -59,17 +58,10 @@ lazy.setup({
         dependencies = {"nvim-lua/plenary.nvim"},
         opts = {}
     },
+
     {
         -- LSP Configuration & Plugins
         'neovim/nvim-lspconfig',
-        dependencies = {
-            -- Useful status updates for LSP
-            -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-            {'j-hui/fidget.nvim', opts = {}},
-
-            -- Additional lua configuration, makes nvim stuff amazing!
-            'folke/neodev.nvim'
-        }
     },
     {'stevearc/oil.nvim'}, -- Utilities
     {'moll/vim-bbye'},
@@ -78,12 +70,11 @@ lazy.setup({
     {'nvim-telescope/telescope-fzf-native.nvim', build = 'make'},
     {"nvim-telescope/telescope-file-browser.nvim"},
     {"folke/which-key.nvim"},
+
     -- Autocomplete
     {'hrsh7th/nvim-cmp'},
     {'hrsh7th/cmp-buffer'},
     {'hrsh7th/cmp-path'},
-    {'saadparwaiz1/cmp_luasnip'},
-    {'hrsh7th/cmp-nvim-lsp'},
 
     -- lsp signature help
     {
@@ -92,11 +83,8 @@ lazy.setup({
         opts = {},
         config = function(_, opts) require'lsp_signature'.setup(opts) end
     }, -- Snippets
-    {'L3MON4D3/LuaSnip'},
-    {'rafamadriz/friendly-snippets'},
     {"nvim-treesitter/nvim-treesitter-textobjects"},
-    {"mrcjkb/rustaceanvim", version = '^4', ft = {'rust'}},
-    {'numToStr/Comment.nvim'}, -- autoclose bracket
-    {"cohama/lexima.vim"},
+    {'numToStr/Comment.nvim'}, 
+    {"cohama/lexima.vim"}, -- autoclose bracket
 })
 return lazy
