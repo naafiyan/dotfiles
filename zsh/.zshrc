@@ -1,8 +1,8 @@
 # Check if mac
 if [[ "$(uname)" == "Darwin" ]]; then
-	export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 	export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
 	export PATH="/opt/homebrew/bin:$PATH"
+	export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 fi
 
 # If cli_bin exists, add it to path
