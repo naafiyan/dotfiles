@@ -17,9 +17,10 @@ vim.opt.termguicolors = true
 -- autocomplete menu settings
 vim.opt.completeopt = {"menu", 'menuone', 'noselect'}
 --
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.statuscolumn = '%=%{v:relnum?v:relnum:v:lnum} '
+-- Relative line number
+-- vim.opt.number = true
+-- vim.opt.relativenumber = true
+-- vim.opt.statuscolumn = '%=%{v:relnum?v:relnum:v:lnum} '
 
 -- text cursor settings
 vim.opt.guicursor = "n-v-i-c:block-Cursor"
