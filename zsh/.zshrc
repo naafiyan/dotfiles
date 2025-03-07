@@ -1,5 +1,8 @@
-# Check if mac
-if [[ "$(uname)" == "Darwin" ]]; then
+os_type=$(uname -s)
+
+arch_type=$(uname -m)
+# Darwin is MacOS
+if [[ "$os_type" == "Darwin" ]]; then
 	export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
 	export PATH="/opt/homebrew/bin:$PATH"
 	export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
