@@ -8,6 +8,12 @@ if [[ "$os_type" == "Darwin" ]]; then
 	export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 fi
 
+if [ -n "$SSH_CONNECTION" ]; then
+    export IS_REMOTE=1
+else
+    export IS_REMOTE=0
+fi
+
 # If cli_bin exists, add it to path
 export PATH="$HOME/cli_bin:$PATH"
 
