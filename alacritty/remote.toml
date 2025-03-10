@@ -1,5 +1,5 @@
 [general]
 import = [
 	"base.toml",
-	"catppuccin_mocha.toml",
+	"gruvbox_material_hard_dark.toml",
 ]
