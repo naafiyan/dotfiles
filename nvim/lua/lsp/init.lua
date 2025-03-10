@@ -16,8 +16,7 @@ if vim.g.lsp_setup_ready == nil then
   lspconfig.pyright.setup({})
   lspconfig.clangd.setup ( {
 	  cmd = {
-	    "clangd",
-	    "--offset-encoding=utf-16",
+	    "clangd-18",
 	  }
 	} )
   lspconfig.gopls.setup{}
