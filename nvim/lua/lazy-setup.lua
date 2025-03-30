@@ -85,6 +85,5 @@ lazy.setup({
     }, -- Snippets
     {"nvim-treesitter/nvim-treesitter-textobjects"},
     {'numToStr/Comment.nvim'}, 
-    {"cohama/lexima.vim"}, -- autoclose bracket
 })
 return lazy

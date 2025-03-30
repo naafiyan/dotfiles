@@ -25,16 +25,12 @@ vim.keymap.set('n', '<leader>o', '<cmd>Oil<cr>')
 -- telescope keybinds
 local tsbuiltin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>?', '<cmd>Telescope oldfiles<cr>')
-vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
-vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
+vim.keymap.set('n', '<leader>f', '<cmd>Telescope find_files<cr>')
+vim.keymap.set('n', '<leader>g', '<cmd>Telescope live_grep<cr>')
 vim.keymap.set('n', '<leader>fd', '<cmd>Telescope diagnostics<cr>')
-vim.keymap
-    .set('n', '<leader>fs', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
-vim.keymap.set('n', '<leader>mm', function()
+vim.keymap.set('n', '<leader>m', function()
     tsbuiltin.buffers({sort_mru = true, ignore_current_buffer = true})
 end)
-vim.api.nvim_set_keymap("n", "<leader>fb", ":Telescope file_browser<CR>",
-                        {noremap = true})
 
 -- lsp keybindings
 vim.api.nvim_create_autocmd('LspAttach', {
