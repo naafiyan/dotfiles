@@ -1,5 +1,0 @@
-[general]
-import = [
-	"base.toml",
-	"gruvbox_material_hard_dark.toml",
-]
