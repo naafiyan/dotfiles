@@ -15,7 +15,7 @@ vim.opt.modifiable = true
 vim.opt.termguicolors = true
 
 -- autocomplete menu settings
-vim.opt.completeopt = {"menu", 'menuone', 'noselect'}
+-- vim.opt.completeopt = {"menu", 'menuone', 'noselect'}
 --
 -- Relative line number
 -- vim.opt.number = true
