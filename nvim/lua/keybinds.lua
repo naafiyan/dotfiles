@@ -6,8 +6,8 @@ vim.keymap.set({'n', 'x'}, 'gy', '"+y')
 vim.keymap.set({'n', 'x'}, 'gp', '"+p')
 
 -- page up and down and center
-vim.keymap.set({'n'}, '<C-b>', '<PageUp>zz')
-vim.keymap.set({'n'}, '<C-f>', '<PageDown>zz')
+vim.keymap.set({'n'}, '<C-b>', '<PageUp>')
+vim.keymap.set({'n'}, '<C-f>', '<PageDown>')
 
 -- buffer navigation
 vim.keymap.set('n', '<C-n>', '<cmd>bnext<cr>')
