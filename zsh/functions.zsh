@@ -4,8 +4,3 @@
 xp() { 
 	printf '\033]52;c;%s\a' "$(base64 | tr -d '\n')"; 
 }
-
-# Start alacritty with diff theme for remote.
-assh() {
-	alacritty --config-file "~/dotfiles/alacritty/remote.toml" -e ssh $1 & disown
-}

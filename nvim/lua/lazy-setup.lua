@@ -65,11 +65,11 @@ lazy.setup({
 		-- LSP Configuration & Plugins
 		"neovim/nvim-lspconfig",
 	},
-	{ "stevearc/oil.nvim" }, -- Utilities
+	{ "stevearc/oil.nvim" },  -- Utilities
 	{ "moll/vim-bbye" },
 	{ "nvim-lua/plenary.nvim" }, -- Fuzzy finder
-	{ "nvim-telescope/telescope.nvim", branch = "0.1.x" },
-	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+	{ "nvim-telescope/telescope.nvim",              branch = "0.1.x" },
+	{ "nvim-telescope/telescope-fzf-native.nvim",   build = "make" },
 	{ "nvim-telescope/telescope-file-browser.nvim" },
 	{ "folke/which-key.nvim" },
 
@@ -77,10 +77,18 @@ lazy.setup({
 	{ "numToStr/Comment.nvim" },
 	{
 		"saghen/blink.cmp",
-	},
-	{
-		"mason-org/mason.nvim",
-		opts = {},
+		-- version = '1.*',
+		build = 'cargo build --release',
+		opts = {
+			keymap = {
+				preset = "default",
+				["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
+				["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
+				["<CR>"] = { "accept", "fallback" },
+				["<Esc>"] = { "hide", "fallback" },
+			},
+		},
+
 	},
 	{
 		"stevearc/conform.nvim",

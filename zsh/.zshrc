@@ -31,6 +31,7 @@ bindkey -v '^?' backward-delete-char # Backspace text beyond just the current in
 setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
+KEYTIMEOUT=1
 
 source "$ZDOTDIR/plugins.zsh"
 
